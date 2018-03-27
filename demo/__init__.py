@@ -267,7 +267,7 @@ def recognize_helper(model,face,model_type):
         dists,angles = get_distances_angles(dlibpoints,centroids)
         dlibpoints = dlibpoints.astype(float)/50;
         dists = dists.astype(float)/50;
-        angles = angles.astype(float)/50;
+        angles = angles.astype(float)/(np.pi*2);
         face = face.reshape(face.shape[0], 48, 48, 1)
         face = face.astype('float32')
         face /= 255
